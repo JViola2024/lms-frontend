@@ -155,7 +155,7 @@ document.addEventListener("click", function (e) {
     document.getElementById("name").value = name;
     document.getElementById("requirement").value = requirement;
     document.getElementById("title").value = taskTitle;
-    document.getElementById("deadline").value = new Date(deadline).toISOString().split("T")[0];
+    document.getElementById("deadline").value = deadline.split("T")[0];
     document.getElementById("status").value = status;
 
     editingId = id;
