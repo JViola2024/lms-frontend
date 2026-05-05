@@ -3,7 +3,7 @@ let editingId = null;
 const form = document.getElementById("mainForm");
 const container = document.getElementById("subjectContainer");
 
-const API_URL = "https://lms-backend-j8dy.onrender.com/api/subjects";;
+const API_URL = "https://lms-backend-j8dy.onrender.com/api/subjects";
 
 /* =========================
    BETÖLTÉS INDULÁSKOR
@@ -35,6 +35,7 @@ function renderCard(subject) {
   const card = document.createElement("div");
   card.className = "subject-card " + subject.status;
   card.dataset.id = subject._id;
+  card.dataset.deadline = subject.deadline;
 
   card.innerHTML = `
   <h2>${subject.name}</h2>
@@ -148,13 +149,13 @@ document.addEventListener("click", function (e) {
     const name = card.querySelector("h2").innerText;
     const requirement = card.querySelector("p:nth-of-type(1)").innerText.split(": ")[1];
     const taskTitle = card.querySelector("p:nth-of-type(2)").innerText.split(": ")[1];
-    const deadline = card.querySelector("p:nth-of-type(3)").innerText.split(": ")[1];
+    const deadline = card.dataset.deadline;
     const status = card.querySelector("p:nth-of-type(4)").innerText.split(": ")[1];
 
     document.getElementById("name").value = name;
     document.getElementById("requirement").value = requirement;
     document.getElementById("title").value = taskTitle;
-    document.getElementById("deadline").value = deadline;
+    document.getElementById("deadline").value = new Date(deadline).toISOString().split("T")[0];
     document.getElementById("status").value = status;
 
     editingId = id;
