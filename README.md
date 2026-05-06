@@ -4,6 +4,8 @@ Webes tanulásszervező alkalmazás egyetemi hallgatóknak. A felhasználó tár
 
 A projekt egyetemi alkalmazásfejlesztési tárgyhoz készült beadandó.
 
+https://jviola2024.github.io/lms-project/
+
 ## Teljes szoftverdokumentáció
 
 A részletes, fejezetekre bontott dokumentáció (követelmények, technológiák, architektúra, adatmodell, REST API specifikáció, telepítés, felhasználói kézikönyv stb.) PDF formában található a repo gyökerében:
