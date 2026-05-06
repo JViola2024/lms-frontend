@@ -21,15 +21,15 @@ A részletes, fejezetekre bontott dokumentáció (követelmények, technológiá
 
 ```
 .
-├── index.html, app.js, style.css   # frontend
+├── index.html, app.js, style.css 
 ├── background.jpg
 └── backend/
     ├── package.json
     └── src/
-        ├── app.js                  # Express belépési pont
-        ├── routes/api.js           # REST végpontok
-        ├── controllers/            # üzleti logika
-        ├── models/Subject.js       # Mongoose séma
+        ├── app.js                  
+        ├── routes/api.js         
+        ├── controllers/          
+        ├── models/Subject.js      
         └── utils/logger.js
 ```
 
